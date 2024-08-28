@@ -1,0 +1,118 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+button {
+    height: 55px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+    button:hover {
+        background-color: #d5d5d5;
+    }
+
+    button:active {
+        background-color: #c9c9c9;
+        transform: scale(0.98);
+    }
+
+.operator {
+    background-color: #ff9500;
+    color: white;
+}
+
+    .operator:hover {
+        background-color: #e08b00;
+    }
+
+.equal-sign {
+    background-color: #34c759;
+    color: white;
+    grid-column: span 2;
+}
+
+    .equal-sign:hover {
+        background-color: #2fa447;
+    }
+
+.all-clear {
+    background-color: #ff3b30;
+    color: white;
+    grid-column: span 2;
+}
+
+    .all-clear:hover {
+        background-color: #e02d27;
+    }
+
+.advanced {
+    background-color: #007aff;
+    color: white;
+}
+
+    .advanced:hover {
+        background-color: #0066cc;
+    }
+
+@media (max-width: 480px) {
+    .calculator {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .calculator-screen {
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
